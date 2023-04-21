@@ -1,0 +1,42 @@
+{% extends 'pages/base.html' %}
+
+{% load static %}
+
+{% block navbar_menu %}
+
+<ul class="navbar-nav">
+  <li class="nav-item">
+    <a class="nav-link" id="home" aria-current="page" href="{% url 'home_page_view' %}">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="bought" href="{% url 'bought_page_view' %}">Services</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " id="product" href="{% url 'product_page_view' %}">Product</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact" href="{% url 'contact_page_view' %}">Contact</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link local_active active" id="contact" href="{% url 'contact_page_view' %}">Watch Detail</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="log_in" href="{% url 'login' %}">Log in</a>
+  </li>
+</ul>
+
+{% endblock navbar_menu %}
+
+{% block content %}
+
+    <header>
+        <h2 class="text-center text-primary">Watch Detail</h2>
+        <h4><b>Brand:</b> {{detail.title}} <span style="margin-left: 200px;"><b>Added time:</b> {{detail.added_time}}</span></h4>
+        <h4><b>Name:</b> {{detail.subtitle}}</h4>
+        <h5><b>Price:</b> {{detail.price}}</h5>
+        <img src="{{ detail.image_one.url }}" alt="{{detail.title}}">
+        <p><b>About:</b> {{detail.about}} </p>
+
+    </header>
+
+{% endblock content %}

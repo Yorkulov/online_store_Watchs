@@ -1,0 +1,32 @@
+.container-fluid{
+    header{
+        .cards{
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+            .card{
+                margin: 10px 20px;
+                width: 500px;
+                height: 200px;
+    
+                img{
+                    height: 200px !important;
+                }
+
+                .h4{
+                    color: rgb(227, 183, 129);
+                }
+
+                .buy_button{
+                    float: right;
+                    
+                    button{
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+}

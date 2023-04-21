@@ -1,0 +1,80 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block navbar_menu %}
+
+<ul class="navbar-nav">
+  <li class="nav-item">
+    <a class="nav-link local_active active" id="home" aria-current="page" href="{% url 'home_page_view' %}">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="bought" href="{% url 'bought_page_view' %}">Services</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="product" href="{% url 'product_page_view' %}">Product</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact" href="{% url 'contact_page_view' %}">Contact</a>
+  </li>
+  {% if request.user.is_authenticated %}
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
+  </li>
+  <li class="nav-item">
+    <a href="{% url 'logout' %}" class="btn btn-danger b_none nav-link" style="border-radius: 0; color: white;">Logout</a>
+  </li>
+  {% else %}
+  <li class="nav-item">
+    <a class="nav-link  log_in" id="log_in" href="{% url 'login' %}">Log in</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link log_in" href="{% url 'sign_up' %}">Sign up</a>
+  </li>
+  {% endif %}
+</ul>
+
+{% endblock navbar_menu %}
+
+{% block content %}
+
+<header class="header row">
+  <div class="about col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+    <h5>Your watch your style</h5>
+    <h1>Have you ever worn a real watch.</h1>
+    <p>The styles of watches available to consumers are endless and profit also endless. if you are Fashion Geek and have guts to sort out need related to</p>
+    <div class="buttons">
+      {% if request.user.is_authenticated %}
+      <a href="{% url 'product_page_view' %}" class="btn started btn-outline-primary">Get started</a>
+      {% else %}
+      <a href="{% url 'login' %}" class="btn started btn-outline-primary">Get started</a>
+      {% endif %}
+      <a href="{% url 'product_page_view' %}" class="btn btn-outline-primary">Gallery</a>
+    </div>
+  </div>
+  <div class="slide col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+    <div id="carouselExampleIndicators" class="carousel slide m-4">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        {% for watch in watchs_slide %}
+        <div class="carousel-item active">
+          <img src="{{ watch.image_one.url }}" class="d-block w-100" alt="Picture" />
+        </div>
+        {% endfor %}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+{% endblock content %}

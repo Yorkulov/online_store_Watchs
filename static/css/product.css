@@ -1,0 +1,23 @@
+.container-fluid header .cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container-fluid header .cards .card {
+  margin: 10px 20px;
+  width: 500px;
+  height: 200px;
+}
+.container-fluid header .cards .card img {
+  height: 200px !important;
+}
+.container-fluid header .cards .card .h4 {
+  color: rgb(227, 183, 129);
+}
+.container-fluid header .cards .card .buy_button {
+  float: right;
+}
+.container-fluid header .cards .card .buy_button button {
+  width: 120px;
+}/*# sourceMappingURL=product.css.map */

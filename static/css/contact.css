@@ -1,0 +1,48 @@
+.container-fluid form {
+  padding: 20px;
+  margin: 80px auto 30px;
+  width: 800px;
+  background-color: rgba(177, 199, 219, 0.571);
+}
+.container-fluid form h1 {
+  font-size: 38px;
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+}
+.container-fluid form label {
+  font-size: 16px;
+  padding: 0 0 0 10px;
+  margin: 0;
+  font-weight: 400;
+  color: black;
+}
+.container-fluid form input {
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 25px;
+  outline: none;
+  border: 2px solid gray;
+  margin-bottom: 30px;
+}
+.container-fluid form textarea {
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 25px;
+  outline: none;
+  border: 2px solid gray;
+  margin-bottom: 30px;
+}
+.container-fluid form button {
+  width: 180px;
+  background-color: white;
+  margin-top: 25px;
+  margin-left: 30px;
+  border-radius: 25px;
+  border: 2px solid gray;
+  transition: all 0.3s linear;
+}
+.container-fluid form button:hover {
+  background-color: cadetblue;
+  color: white;
+}/*# sourceMappingURL=contact.css.map */

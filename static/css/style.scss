@@ -1,0 +1,177 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin local_active() {
+    transition: all 0.3s linear;
+    border-bottom: 4px solid blue;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 50%;
+}
+
+.b_none{
+    border: none;
+    border-radius: 0;                           
+}
+
+.local_active{
+    color: black;
+    @include local_active();
+}
+
+
+.container-fluid {
+    padding: 0;
+    margin: 0 auto;
+    width: 1440px;
+    background: url('../images/Rectangle\ 58.png') no-repeat center center / cover;
+
+    .navbar{
+        width: 100%;
+        margin-bottom: 50px;
+        .container-md{
+            .collapse{
+                ul{
+                    li{
+                        margin: 0 25px;
+
+                        a{
+                            font-size: 18px;
+                            font-weight: 700;
+                            padding-bottom: 2px !important;
+                            transition: all 0.5 linear;
+                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+                            &:hover{
+                                @include local_active();
+                            }
+                        }   
+
+                        .log_in{
+                            background-color: blue;
+                            color: white;
+                            padding: 5px 28px 5px 22px;
+                            border-radius: 4px;
+
+                            &:hover{
+                                border: none;
+                                border-radius: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header{
+        margin: 10px 50px;
+        margin-top: 100px;
+
+        .about{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding-left: 40px;
+            h5{
+                font-size: 12px;
+                padding-left: 5px;
+                color: blue;
+                font-weight: 500;
+            }
+
+            h1{
+                width: 60%;
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 67px;
+                line-height: 120%;
+                color: #01010D;
+            }
+
+            p{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #01010D;
+            }
+
+            .started{
+                background-color: #0d6efd;
+                color: white;
+
+                &:hover{
+                    background: none;
+                    border: 1px solid #0d6efd;
+                    color: #0d6efd;
+                }
+            }
+        }
+
+        .slide{
+            .carousel{
+                .carousel-indicators{
+                    background-color: #0d6dfdb1;
+                    border-radius: 50%;
+                }
+
+                .carousel-inner{
+                    border-radius: 12px;
+                    // border: 3px solid burlywood;
+
+                    img{
+                        height: 470px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .footer{
+        margin-top: 70px;
+        padding-bottom: 30px;
+
+        ul{
+            display: flex;
+            justify-content: flex-end;
+
+            li{
+                list-style: none;
+                margin: 0 20px;
+                font-weight: 400;
+                a{
+                    color: black;
+                    text-decoration: none;
+                    transition: all 0.5 linear;
+                    i{
+                        color: blue;
+                    }
+
+                    &:hover{
+                        color: blue;
+                        i{
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1024px){
+    .container{
+        .header{
+            .col-12:nth-child(2){
+                margin: 10px 60px;
+            }
+        }
+    }
+}
+

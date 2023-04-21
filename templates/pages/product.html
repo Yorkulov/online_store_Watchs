@@ -1,0 +1,70 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block navbar_menu %}
+
+<ul class="navbar-nav">
+  <li class="nav-item">
+    <a class="nav-link" id="home" aria-current="page" href="{% url 'home_page_view' %}">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="bought" href="{% url 'bought_page_view' %}">Services</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link local_active active" id="product" href="{% url 'product_page_view' %}">Product</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact" href="{% url 'contact_page_view' %}">Contact</a>
+  </li>
+  {% if request.user.is_authenticated %}
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
+  </li>
+  <li class="nav-item">
+    <a href="{% url 'logout' %}" class="btn btn-danger b_none nav-link">Logout</a>
+  </li>
+  {% else %}
+  <li class="nav-item">
+    <a class="nav-link  log_in" id="log_in" href="{% url 'login' %}">Log in</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link log_in" href="{% url 'sign_up' %}">Sign up</a>
+  </li>
+  {% endif %}
+</ul>
+
+{% endblock navbar_menu %}
+
+
+{% block content %} 
+ 
+  <header>
+
+    <div class="cards">
+      {% for watch in all_watchs %}
+      <div class="card mb-3" style="max-width: 540px;">
+        <button type="submit" class="btn btn-outline-light" style="position: absolute; right: 0"><a href="{% url 'update_watch' watch.pk %}">Edit</a></button>
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{ watch.image_one.url }}" class="img-fluid rounded-start" alt="Picture" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ watch.title }}</h5>
+              <p class="card-text">{{ watch.subtitle }}</p>
+              <p class="card-text">
+                <small class="text-body-secondary h4">Price: &nbsp; {{ watch.price }}$</small>
+              </p>
+              <p class="buy_button">
+                <a class="btn btn-outline-primary" href="{% url 'contact_page_view' %}" style="width: 120px">Buy</a>
+                <a class="btn btn-outline-success" href="{% url 'watch_detail' watch.pk %}" style="width: 120px">See</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </header>
+  
+{% endblock content %}
