@@ -21,6 +21,14 @@
     @include local_active();
 }
 
+.button_sign_up{
+    text-decoration: none;
+    color: black;
+}
+
+.button_sign_up:hover{
+    color: white;
+}
 
 .container-fluid {
     padding: 0;
@@ -37,7 +45,7 @@
                     li{
                         margin: 0 25px;
 
-                        a{
+                        .nav-link{
                             font-size: 18px;
                             font-weight: 700;
                             padding-bottom: 2px !important;

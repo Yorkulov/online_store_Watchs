@@ -17,6 +17,15 @@
   border-bottom-right-radius: 50%;
 }
 
+.button_sign_up {
+  text-decoration: none;
+  color: black;
+}
+
+.button_sign_up:hover {
+  color: white;
+}
+
 .container-fluid {
   padding: 0;
   margin: 0 auto;
@@ -30,14 +39,14 @@
 .container-fluid .navbar .container-md .collapse ul li {
   margin: 0 25px;
 }
-.container-fluid .navbar .container-md .collapse ul li a {
+.container-fluid .navbar .container-md .collapse ul li .nav-link {
   font-size: 18px;
   font-weight: 700;
   padding-bottom: 2px !important;
   transition: all 0.5 linear;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.container-fluid .navbar .container-md .collapse ul li a:hover {
+.container-fluid .navbar .container-md .collapse ul li .nav-link:hover {
   transition: all 0.3s linear;
   border-bottom: 4px solid blue;
   border-bottom-left-radius: 80%;

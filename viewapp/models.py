@@ -1,7 +1,7 @@
 from django.db import models
 from django.shortcuts import render
 from django.urls import reverse
-
+from django.contrib.auth.models import User
 # Create your models here.
 
 
@@ -31,4 +31,31 @@ class ContactModel(models.Model):
 
     def __srt__(self):
         return self.email
+    
+
+class WatchRegistrationModel(models.Model):
+    user = models.ForeignKey(User, 
+                            related_name = "watch_user_register", 
+                            on_delete=models.CASCADE)
+    watch = models.ForeignKey(WatchModel, 
+                            related_name = "watch_register",
+                            on_delete=models.CASCADE)
+    watch_number = models.SmallIntegerField()
+    country = models.CharField(max_length=100)
+    address = models.TextField()
+
+
+    def __srt__(self):
+        return User.username
+    
+
+class WatchBuyModel(models.Model):
+    registration = models.ForeignKey(WatchRegistrationModel,
+                                     related_name = "watch_buy",
+                                     on_delete=models.CASCADE)
+    card_number = models.CharField(max_length=16)
+    check_code = models.SmallIntegerField()
+
+    def __str__(self):
+        return WatchModel.title
     

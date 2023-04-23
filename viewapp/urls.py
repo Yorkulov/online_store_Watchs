@@ -1,6 +1,6 @@
 from django.urls import path
 from django.views.generic import TemplateView
-from .views import WatchView, ContactView, CreateWatchView, WatchDetail, DeleteWatchView, UpdateWatchView
+from .views import WatchView, ContactView, CreateWatchView, WatchDetail, DeleteWatchView, UpdateWatchView, WatchBuyView, WatchRegisterView
 
 urlpatterns = [
     path('', WatchView.as_view(), name="home_page_view"),
@@ -11,5 +11,7 @@ urlpatterns = [
     path('bought/', WatchView.as_view(template_name="pages/services.html"), name="bought_page_view"),
     path('create/', CreateWatchView.as_view(), name="create_watch"),
     path('delete/<int:pk>/', DeleteWatchView.as_view(), name="delete_watch"),
-    path('update/<int:pk>/', UpdateWatchView.as_view(), name="update_watch")
+    path('update/<int:pk>/', UpdateWatchView.as_view(), name="update_watch"),
+    path('watch/<int:pk>/register/', WatchRegisterView.as_view(), name="watch_register"),
+    path('watch/<int:pk>/register/buy/', WatchBuyView.as_view(), name="watch_buy"),
 ]

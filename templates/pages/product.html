@@ -56,7 +56,7 @@
                 <small class="text-body-secondary h4">Price: &nbsp; {{ watch.price }}$</small>
               </p>
               <p class="buy_button">
-                <a class="btn btn-outline-primary" href="{% url 'contact_page_view' %}" style="width: 120px">Buy</a>
+                <a class="btn btn-outline-primary" href="{% url 'watch_register' watch.pk%}" style="width: 120px">Buy</a>
                 <a class="btn btn-outline-success" href="{% url 'watch_detail' watch.pk %}" style="width: 120px">See</a>
               </p>
             </div>
