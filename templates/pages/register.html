@@ -27,8 +27,9 @@
 
 {% block content %}
 
-<form method="post">{% csrf_token %}
+<form method="post" class="login-form">{% csrf_token %}
     {{ user_form.as_p }}
+    {{ profile_form.as_p }}
     <button type="submit" class="btn btn-primary bg-danger mb-4">Sign Up</button>
 </form>
 

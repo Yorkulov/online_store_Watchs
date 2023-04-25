@@ -37,12 +37,21 @@
 
 {% block content %}
 
-<ul>
-    <li class="text-center"><h2><a href="{% url 'profile_edit' %}">Edit Profile</a></h2></li>
-    <li><b>Username: </b>{{request.user.username}}</li>
-    <li><b>First Name: </b>{{request.user.first_name}}</li>
-    <li><b>Last Name: </b>{{request.user.last_name}}</li>
-    <li><b>Email: </b>{{request.user.email}}</li>
-</ul>
+<section class="section-profile">
+  <ul>
+    {% if request.user.profile.image.url is not None %}
+    <li><img src="{{ request.user.profile.image.url }}" alt="Photo"></li>
+    {% else %}
+    <h4>Profilingiz rasmi mavjud emas</h3>
+    {% endif %}
+    <li><b>Username: </b> <span>{{request.user.username}}</span></li>
+    <li><b>First Name: </b> <span>{{request.user.first_name}}</span></li>
+    <li><b>Last Name: </b> <span>{{request.user.last_name}}</span></li>
+    <li><b>Email: </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>{{request.user.email}}</span></li>
+    <li><b>Birthday: </b>&nbsp;&nbsp;&nbsp; <span>{{request.user.profile.date_of_birth}}</span></li>
+    <li><b>Six: </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>{{request.user.profile.gender}}</span></li>
+    <li><a href="{% url 'profile_edit' %}">Edit Profile</a></li>
+  </ul>
+</section>
 
 {% endblock content %}

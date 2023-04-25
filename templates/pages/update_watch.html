@@ -26,7 +26,7 @@
 
 {% block content %}
 
-<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+<form method="POST" enctype="multipart/form-data" class="login-form">{% csrf_token %}
     {{form.as_p}}
     <button type="submit" class="btn btm-danger">Save</button>
 </form>

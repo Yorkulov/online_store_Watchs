@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth import models
+from account.models import Profile
 
 class LoginForm(forms.Form):
     username = forms.CharField()
@@ -29,10 +30,16 @@ class UserRegistrationForm(forms.ModelForm):
         return data['password_2']
     
 
-    
-
 class UserEditForm(forms.ModelForm):
 
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'email']
+
+
+
+class ProfileEditForm(forms.ModelForm):
+
+    class Meta:
+        model = Profile
+        fields = ['gender', 'date_of_birth', 'image']

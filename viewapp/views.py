@@ -61,7 +61,7 @@ class DeleteWatchView(DeleteView):
     template_name = "pages/delete_watch.html"
     success_url = reverse_lazy("home_page_view")
 
-
+                            
 class UpdateWatchView(UpdateView):
     model = WatchModel
     context_object_name = 'detail'

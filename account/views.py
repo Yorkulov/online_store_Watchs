@@ -3,9 +3,10 @@ from django.template import RequestContext
 from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import View
-from django.urls import reverse_lazy,reverse
+from django.urls import reverse_lazy, reverse
 from django.contrib.auth import authenticate, login
-from account.forms import UserRegistrationForm, LoginForm, UserEditForm
+from account.forms import UserRegistrationForm, LoginForm, UserEditForm, ProfileEditForm
+from account.models import Profile
 
 # Create your views here.
 
@@ -42,6 +43,7 @@ def user_register(request):
                 user_form.cleaned_data["password"]
             )
             new_user.save()
+            Profile.objects.create(user=new_user)
             # context = {
             #     "new_user" : new_user,
             # }
@@ -92,15 +94,26 @@ def profile(request):
 
 
 class ProfileEdit(View):
+    success_url = reverse_lazy('home_page_view')
+
     def get(self, request):
         user_form = UserEditForm(instance=request.user)
+        profile_form = ProfileEditForm(instance=request.user.profile)
         context = {
-            "user_form" : user_form
+            "user_form" : user_form,
+            "profile_form" : profile_form
         }
         return render(request, "pages/profile_edit.html", context)
 
     def post(self, request):
-        user_form = UserEditForm(instance=request.user, data=request.POST)
-        if user_form.is_valid():
-            user_form.save()
-            return redirect('home_page_view')
+        if request.method == "POST":
+            user_form = UserEditForm(instance=request.user, data=request.POST)
+            profile_form = ProfileEditForm(instance=request.user.profile,
+                                    data=request.POST,
+                                    files=request.FILES)
+            if user_form.is_valid() and profile_form.is_valid():
+                user_form.save()
+                profile_form.save()
+                return redirect('profile')
+        return render(request, "pages/profile_edit.html", { "user_form" : user_form, "profile_form" : profile_form })
+    

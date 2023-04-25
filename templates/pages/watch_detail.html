@@ -41,14 +41,44 @@
 
 {% block content %}
 
-    <header>
-        <h2 class="text-center text-primary">Watch Detail</h2>
-        <h4><b>Brand:</b> {{detail.title}} <span style="margin-left: 200px;"><b>Added time:</b> {{detail.added_time}}</span></h4>
-        <h4><b>Name:</b> {{detail.subtitle}}</h4>
-        <h5><b>Price:</b> {{detail.price}}</h5>
-        <img src="{{ detail.image_one.url }}" alt="{{detail.title}}">
-        <p><b>About:</b> {{detail.about}} </p>
-
-    </header>
+<section class="watch-detail row">
+  <ul class="col-md-6">
+      <li>Brand: <span>{{detail.title}}</span></li>
+      <li>Name: <span>{{detail.subtitle}}</span></li>
+      <li>Price: <span>{{detail.price}}$</span></li>
+      <li>
+          <div class="about">
+              {{detail.about}}
+          </div>
+      </li>
+  </ul>
+  <div class="slide col-md-6">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{{detail.image_one.url}}" class="d-block " alt="...">
+            </div>
+            {% if detail.image_two.url is not None %}
+            <div class="carousel-item">
+              <img src="{{detail.image_two.url}}" class="d-block " alt="...">
+            </div>
+            {% endif %}
+            {% if detail.image_three.url is not None %}
+            <div class="carousel-item">
+              <img src="{{detail.image_three.url}}" class="d-block " alt="...">
+            </div>
+            {% endif %}
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+  </div>
+</section>
 
 {% endblock content %}

@@ -23,8 +23,9 @@
 
 {% block content %}
 
-<form method="post">{% csrf_token %}
+<form method="post" class="login-form">{% csrf_token %}
     {{ form.as_p}}
+    <span><a href="{% url 'password_reset' %}" class="text-danger"><b>Forget Password</b></a></span>
     <div class="buttons">
       <button type="submit" class="btn btn-outline-success">Send</button>
       <button class="btn btn-outline-danger button_sign_up"><a href="{% url 'sign_up' %}">Sign Up</a></button>

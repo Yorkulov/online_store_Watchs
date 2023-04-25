@@ -27,7 +27,7 @@
 
 {% block content %}
 
-<form method="POST">{% csrf_token %}
+<form method="POST" class="login-form">{% csrf_token %}
     {{ buy_form.as_p }}
     <button type="submit" class="btn btn-danger bg-danger mb-4">Save Editing</button>
 </form>

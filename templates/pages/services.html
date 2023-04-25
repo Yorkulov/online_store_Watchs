@@ -20,7 +20,7 @@
     <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
   </li>
   <li class="nav-item">
-    <a href="{% url 'logout' %}" class="btn btn-danger b_none nav-link">Logout</a>
+    <a href="{% url 'logout' %}" class="btn btn-danger b_none">Logout</a>
   </li>
   {% else %}
   <li class="nav-item">
@@ -37,15 +37,14 @@
 
 {% block content %} 
  
-  <header style="height: 65vh">
-
-    <h4 class="text-center text-danger h2">If there is a problem with the product you received, please contact the following numbers or visit the indicated address.</h4>
-
-    <p class="text-primary" style="padding-left: 100px; text-decoration: underline;">Contact: <a href="#"> +998930941918 </a></p>
-    <p class="text-primary" style="padding-left: 100px; text-decoration: underline;">Contact: <a href="#"> +998902835012 </a></p>
-
-    <h2 class="text-center text-yellow"><a href="#">Location</a></h2>
-    <br><br><br><hr><h2><a class="text-right" href="{% url 'admin_page' %}">Admin Panel</a></h2>
-  </header>
+<section class="services-section">
+  <h1>Services</h1>
+  <span class="shadow-services"></span>
+  <div class="call">
+    <p>24/7 Aviable in Miami, FL</p>
+    <a href="#">+998 (93) 094-19-18</a>
+  </div>
+  <div class="call-width"></div>
+</section>
   
 {% endblock content %}

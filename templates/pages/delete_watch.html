@@ -27,10 +27,10 @@
 {% block content %}
 
 <form method="POST">{% csrf_token %}
-    <h2>Brand: {{detail.title}}</h2>
-    <h4>Name: {{detail.subtitle}}</h4>
+    <h2 style="color: #4682B4">Brand: <q style="color: #A0522D">{{detail.title}}</q></h2>
+    <h4 style="color: #4682B4">Name: <q style="color: #A0522D">{{detail.subtitle}}</q></h4>
     {{form.as_p}}
-    <button type="submit" class="btn btm-danger">Watch delete</button>
+    <button type="submit" class="btn btm-danger"><b>Watch delete</b></button>
 </form>
 
 {% endblock content %}

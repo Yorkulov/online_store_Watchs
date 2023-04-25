@@ -46,7 +46,7 @@ class WatchRegistrationModel(models.Model):
 
 
     def __srt__(self):
-        return User.username
+        return self.user.username
     
 
 class WatchBuyModel(models.Model):
@@ -57,5 +57,5 @@ class WatchBuyModel(models.Model):
     check_code = models.SmallIntegerField()
 
     def __str__(self):
-        return WatchModel.title
+        return self.registration.title
     

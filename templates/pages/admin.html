@@ -26,6 +26,406 @@
 
 {% block content %}
 
-<h2 class="text-center" style="height: 67vh;"><a href="{% url 'create_watch' %}" class="btn btn-outline-success">New watch add</a></h2>
+<section class="admin-panel">
+  <div class="statistic row">
+      <div class="offcanvass col-md-4 text-center">
+          <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Contacts messages</button>
 
+          <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasScrollingTwo" aria-controls="offcanvasScrollingTwo">Checkout</button>
+
+          <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Website
+              statistics</button>
+
+          <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+              id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+              <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                  <div class="toast-container position-static">
+                      <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                          <div class="toast-header">
+                              <svg class="bd-placeholder-img rounded me-2" width="20" height="20"
+                                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                  preserveAspectRatio="xMidYMid slice" focusable="false">
+                                  <rect width="100%" height="100%" fill="#007aff"></rect>
+                              </svg>
+                              <strong class="me-auto">Bootstrap</strong>
+                              <small class="text-body-secondary">just now</small>
+                              <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                  aria-label="Close"></button>
+                          </div>
+                          <div class="toast-body">
+                              See? Just like this.
+                          </div>
+                      </div>
+
+                      <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                          <div class="toast-header">
+                              <svg class="bd-placeholder-img rounded me-2" width="20" height="20"
+                                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                  preserveAspectRatio="xMidYMid slice" focusable="false">
+                                  <rect width="100%" height="100%" fill="#007aff"></rect>
+                              </svg>
+                              <strong class="me-auto">Bootstrap</strong>
+                              <small class="text-body-secondary">2 seconds ago</small>
+                              <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                  aria-label="Close"></button>
+                          </div>
+                          <div class="toast-body">
+                              Heads up, toasts will stack automatically
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+              id="offcanvasScrollingTwo" aria-labelledby="offcanvasScrollingLabel">
+              <div class="offcanvas-header">
+                  <h3 class="offcanvas-title" id="offcanvasScrollingLabel">Income and Expenses</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body text-start">
+                  <h4>Total income</h4>
+                  <p>48736 $</p>
+                  <hr>
+                  <h4>Amount withdrawn</h4>
+                  <p>20874 $</p>
+                  <hr>
+                  <h4>Account number is available</h4>
+                  <p>12875 $</p>
+                  <hr>
+                  <h4>Total taxes</h4>
+                  <p>10873 $</p>
+                  <hr>
+                  <h4>This month's taxes</h4>
+                  <p>300 $</p>
+              </div>
+          </div>
+
+          <div class="offcanvas offcanvas-bottom" data-bs-scroll="true" tabindex="-1"
+              id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+              <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                  <div class="cards row">
+                      <div class="card col-md-4">
+                          <div class="card-header">
+                              Registered users
+                          </div>
+                          <div class="card-body">
+                              <h5 class="card-title">All Time <span>3242</span></h5>
+                              <p class="card-text">This month <span>123</span></p>
+                          </div>
+                      </div>
+                      <div class="card col-md-4">
+                          <div class="card-header">
+                              Number of views
+                          </div>
+                          <div class="card-body">
+                              <h5 class="card-title">All Time <span>3242</span></h5>
+                              <p class="card-text">This month <span>123</span></p>
+                          </div>
+                      </div>
+                      <div class="card col-md-4">
+                          <div class="card-header">
+                              Registered users
+                          </div>
+                          <div class="card-body">
+                              <h5 class="card-title">All Time <span>3242</span></h5>
+                              <p class="card-text">This month <span>123</span></p>
+                          </div>
+                      </div>
+                  </div>>
+              </div>
+          </div>
+      </div>
+      <div class="admin-info col-md-4 text-center">
+          <h4> <b>Super Admin: </b> Temurbek Yorkulov</h4>
+      </div>
+      <div class="watch_edit col-md-4 text-center">
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+              <a href="#" type="button" class="btn btn-outline-success">Watch add</a>
+              <a href="#" type="button" class="btn btn-outline-info">Watch edit</a>
+              <a href="#" type="button" class="btn btn-outline-danger">Watch delete</a>
+          </div>
+      </div>
+  </div>
+  <div class="informations row">
+      <div class="orders col-md-4">
+          <div class="title">
+              <h2 class="title-text">Orders</h2>
+          </div>
+          <div class="cards accordion" id="accordionPanelsStayOpenExample">
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                          aria-controls="panelsStayOpen-collapseOne">
+                          Accordion Item #1
+                      </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accoprdion-collapse collapse show"
+                      data-bs-parent="#accordionPanelsStayOpenExample">
+                      <div class="accordion-body mb-3">
+                          <div class="row">
+                              <div class="col-md-4">
+                                  <img src="./7_df138706-1b15-4e94-b297-189068d12e40-sw.webp"
+                                      class="img-fluid rounded-start" alt="Picture">
+                              </div>
+                              <div class="col-md-8">
+                                  <div class="card-body">
+                                      <h3 class="card-title">Username Temurbek</h3>
+                                      <h4 class="card-title">Soat nomi </h4>
+                                      <p class="card-body-secondary">Buyurtma holati </p>
+                                      <button type="submit" class="btn btn-outline-info">Accept</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
+                          aria-controls="panelsStayOpen-collapseTwo">
+                          Accordion Item #1
+                      </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accoprdion-collapse collapse"
+                      data-bs-parent="#accordionPanelsStayOpenExample">
+                      <div class="accordion-body mb-3">
+                          <div class="row">
+                              <div class="col-md-4">
+                                  <img src="./7_df138706-1b15-4e94-b297-189068d12e40-sw.webp"
+                                      class="img-fluid rounded-start" alt="Picture">
+                              </div>
+                              <div class="col-md-8">
+                                  <div class="card-body">
+                                      <h3 class="card-title">Username Temurbek</h3>
+                                      <h4 class="card-title">Soat nomi </h4>
+                                      <p class="card-body-secondary">Buyurtma holati </p>
+                                      <button type="submit" class="btn btn-outline-info">Accept</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="tables col-md-8">
+          <div class="all_users">
+              <div class="title">
+                  <h2 class="title-text">All Users</h2>
+              </div>
+              <div class="scroll">
+                  <table class="table table-dark table-striped table-bordered border-primary">
+                      <thead>
+                          <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">First</th>
+                              <th scope="col">Last</th>
+                              <th scope="col">Handle</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">3</th>
+                              <td colspan="2">Larry the Bird</td>
+                              <td>@twitter</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">3</th>
+                              <td colspan="2">Larry the Bird</td>
+                              <td>@twitter</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+          <div class="all_contacts">
+              <div class="title">
+                  <h2 class="title-text">All Contacts</h2>
+              </div>
+              <div class="scroll">
+                  <table class="table table-dark table-striped table-bordered border-primary">
+                      <thead>
+                          <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">First</th>
+                              <th scope="col">Last</th>
+                              <th scope="col">Handle</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">3</th>
+                              <td colspan="2">Larry the Bird</td>
+                              <td>@twitter</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">3</th>
+                              <td colspan="2">Larry the Bird</td>
+                              <td>@twitter</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+          <div class="all_watchs">
+              <div class="title">
+                  <h2 class="title-text">All Watchs</h2>
+              </div>
+              <div class="scroll">
+                  <table class="table table-dark table-striped table-bordered border-primary">
+                      <thead>
+                          <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">First</th>
+                              <th scope="col">Last</th>
+                              <th scope="col">Handle</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">3</th>
+                              <td colspan="2">Larry the Bird</td>
+                              <td>@twitter</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">3</th>
+                              <td colspan="2">Larry the Bird</td>
+                              <td>@twitter</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+      </div>
+  </div>
+
+</section>
+
+<script>
+  const toastElList = document.querySelectorAll('.toast')
+  const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl, option))
+</script>
 {% endblock content %}

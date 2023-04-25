@@ -21,7 +21,7 @@
     <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
   </li>
   <li class="nav-item">
-    <a href="{% url 'logout' %}" class="btn btn-danger b_none nav-link" style="border-radius: 0; color: white;">Logout</a>
+    <a href="{% url 'logout' %}" class="btn btn-danger b_none" style="border-radius: 0; color: white;">Logout</a>
   </li>
   {% else %}
   <li class="nav-item">
@@ -60,9 +60,16 @@
       </div>
       <div class="carousel-inner">
         {% for watch in watchs_slide %}
-        <div class="carousel-item active">
-          <img src="{{ watch.image_one.url }}" class="d-block w-100" alt="Picture" />
-        </div>
+          {% if forloop.first %}
+          <div class="carousel-item active">
+            <img src="{{ watch.image_one.url }}" class="d-block w-100" alt="Picture" />
+          </div>
+          {% endif %}
+          {% if forloop.counter > 1 %}
+          <div class="carousel-item">
+            <img src="{{ watch.image_one.url }}" class="d-block w-100" alt="Picture" />
+          </div>
+          {% endif %}
         {% endfor %}
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -77,4 +84,126 @@
   </div>
 </header>
 
+<section class="home-section section container justify-content-center">
+  <div class="part-one text-center">
+      <h1>Our Service Feature</h1>
+      <p class="text-center">Watch companies are now focusing more on trendy watches which targets the
+          youngsters who always.</p>
+      <div class="main-part row justify-content-center">
+          <div class="cards-one text-center col-3 col-sm-3 col-12">
+              <div class="card">
+                  <img class="img-fluid" src="{% static 'images/Group 101.png' %}" alt="Picture">
+                  <h5 class="card-title">Andriod version</h5>
+                  <p class="card-text">Android officially 10.0</p>
+              </div>
+              <div class="card">
+                  <img class="img-fluid" src="{% static 'images/Group 103.png' %}" alt="Picture">
+                  <h5 class="card-title">Internet Service</h5>
+                  <p class="card-text">$G Smart Watches</p>
+              </div>
+              <div class="card">
+                  <img class="img-fluid" src="{% static 'images/Group 105.png' %}" alt="Picture">
+                  <h5 class="card-title">Music Player</h5>
+                  <p class="card-text">Use the Musoc app</p>
+              </div>
+          </div>
+
+          <div class="part-one__img col-lg-6 col-md-12 col-sm-12 col-12 text-center align-self-center">
+              <img class="img-fluid" src="{% static 'images/watch.png' %}" alt="Picture">
+          </div>
+
+          <div class="cards-two col-3 col-sm-3 col-12">
+              <div class="card">
+                  <img class="img-fluid" src="{% static 'images/Group 107.png' %}" alt="Picture">
+                  <h5 class="card-title">Battery</h5>
+                  <p class="card-text">battery life is 18 hours</p>
+              </div>
+              <div class="card">
+                  <img class="img-fluid" src="{% static 'images/Group 109.png' %}" alt="Picture">
+                  <h5 class="card-title">Settings</h5>
+                  <p class="card-text">Choose your settings.</p>
+              </div>
+              <div class="card">
+                  <img class="img-fluid" src="{% static 'images/Group 111.png' %}" alt="Picture">
+                  <h5 class="card-title">Messages</h5>
+                  <p class="card-text">Open the Messages app</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="part-two justify-content-center">
+      <div class="about">
+          <p>Watch</p>
+          <h1 class="display-4">Our Available Product</h1>
+          <p>Watch is such a desired fashion accessory and is seen as a necessary cupboard piece for both men
+              and women. Wristwatches are generally.</p>
+      </div>
+      <div class="cards row justify-content-center">
+          <div class="card col-3">
+              <img class="img-fluid" src="{% static 'images/photo-1.png' %}" alt="Picture">
+          </div>
+          <div class="card col-3">
+              <img class="img-fluid" src="{% static 'images/photo-2.png' %}" alt="Picture">
+          </div>
+          <div class="card col-3">
+              <img class="img-fluid" src="{% static 'images/photo-3.png' %}" alt="Picture">
+          </div>
+      </div>
+      <div class="watch-video justify-content-center row">
+          <div class="videoParent col-xxl-6 col-xl-7 col-lg-12">
+              <video class="video">
+                  <source src="https://smartwatch-setes-128355.netlify.app/video/Introducing%20Apple%20Watch%20Series%208%20_%20Apple.mp4">
+              </video>
+          </div>
+          <div class="video-text col-xxl-5 col-xl-5 col-lg-12">
+              <h2 class="display-4">The best watch for your best time.</h2>
+              <p>Since the watch is such a popular Fashion accessory and is seen as an essential wardrobe
+                  piece for both men and women.</p>
+              <button class="play-video" type="submit">Play Video</button>
+          </div>
+      </div>
+      <div class="text-card row">
+          <p class="col-12 align-center-start">For example, if someone lives in adverse conditions then they
+              use the slogan accuracy under
+              adverse conditions to show them their watch can fulfill their needs. Similarly, if someone likes
+              handmade products then they use the slogan Handmade. </p>
+          <div class="about col-12 row align-items-end justify-content-start">
+              <div class="info col-3">
+                  <h3>Ronald Richards</h3>
+                  <p>D.M.Richards</p>
+              </div>
+              <div class="img col-3 align-self-center"><img class="" src="{% static 'images/Rectangle 33.png' %}"
+                      alt="Picture"></div>
+              <div class="col-4 vector">
+                  <img src="{% static 'images/Vector (3).png' %}" alt="Picture">
+                  <img src="{% static 'images/Vector (3).png' %}" alt="Picture">
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<script src="{% static 'js/script.js' %}"></script>
+<script>
+  this.window.addEventListener('DOMContentLoaded', function () {
+    const myVideo = this.document.querySelector('.video');
+    const button = this.document.querySelector('.play-video');
+
+    myVideo.muted = false;
+
+    button.addEventListener('click', function () {
+        if(myVideo.paused)
+        {
+            myVideo.play();
+            button.innerHTML = "Pause Video";
+        }
+        else
+        {
+            myVideo.pause();
+            button.innerHTML = "Play Video";
+        }
+    })
+})
+</script>
 {% endblock content %}
