@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth import models
-from account.models import Profile
+from account.models import Profile, ContactModel, CommentModel
 
 class LoginForm(forms.Form):
     username = forms.CharField()
@@ -43,3 +43,17 @@ class ProfileEditForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['gender', 'date_of_birth', 'image']
+
+
+class ContactForm(forms.ModelForm):
+    
+    class Meta:
+        model = ContactModel
+        fields = ['first_name', 'last_name', 'email', 'phone_number', 'message']
+
+
+class CommentForm(forms.ModelForm):
+
+    class Meta:
+        model = CommentModel
+        fields = ['text']

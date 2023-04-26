@@ -487,4 +487,12 @@
   height: 400px !important;
   border: 2ps solid;
   margin-left: 50px;
+}
+
+.language_form {
+  background-color: none;
+  width: 150px;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=addition.css.map */

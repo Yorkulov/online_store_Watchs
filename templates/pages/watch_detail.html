@@ -1,47 +1,12 @@
 {% extends 'pages/base.html' %}
 
 {% load static %}
-
-{% block navbar_menu %}
-
-<ul class="navbar-nav">
-  <li class="nav-item">
-    <a class="nav-link" id="home" aria-current="page" href="{% url 'home_page_view' %}">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="bought" href="{% url 'bought_page_view' %}">Services</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link " id="product" href="{% url 'product_page_view' %}">Product</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="contact" href="{% url 'contact_page_view' %}">Contact</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link local_active active" id="contact" href="{% url 'contact_page_view' %}">Watch Detail</a>
-  </li>
-  {% if request.user.is_authenticated %}
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
-  </li>
-  <li class="nav-item">
-    <a href="{% url 'logout' %}" class="btn btn-danger b_none nav-link">Logout</a>
-  </li>
-  {% else %}
-  <li class="nav-item">
-    <a class="nav-link  log_in" id="log_in" href="{% url 'login' %}">Log in</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link log_in" href="{% url 'sign_up' %}">Sign up</a>
-  </li>
-  {% endif %}
-</ul>
-
-{% endblock navbar_menu %}
+{% load hitcount_tags %}
 
 {% block content %}
 
 <section class="watch-detail row">
+  <span style="color:white">Izohlar soni: {{comments.count}} | Ko'rilganlar soni: {% get_hit_count for detail %}</span>
   <ul class="col-md-6">
       <li>Brand: <span>{{detail.title}}</span></li>
       <li>Name: <span>{{detail.subtitle}}</span></li>
@@ -80,5 +45,24 @@
         </div>
   </div>
 </section>
+
+<div class="comments">
+  <form method="POST">{% csrf_token %}
+      {{comment_form.as_p}}
+      <button type="submit">Send</button> 
+  {% for comment in comments %}
+
+  <div class="comment card" style="border-bottom: 1px solid gray; padding: 20px; margin-top: 30px;">
+    <h5 style="width: 50%; display: inline-block;" class="text-left text-danger">{{ comment.user }}</h5>
+    <p style="width: 40%; display: inline-block;" class="text-muted text-right">{{ comment.created_time }}</p>
+    <div class="card-body">
+      <p>{{ comment.text }}</p>
+    </div>
+  </div style="margin-bottom: 30px">
+
+  {% endfor %}
+  </form>
+</div>
+
 
 {% endblock content %}

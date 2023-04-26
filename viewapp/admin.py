@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
-from .models import WatchModel, ContactModel, WatchRegistrationModel, WatchBuyModel
+from .models import WatchModel, WatchRegistrationModel, WatchBuyModel
+from account.models import CommentModel
 
 
 # Register your models here.
@@ -14,4 +15,8 @@ class WatchBuyAdmin(admin.ModelAdmin):
 admin.site.register(WatchRegistrationModel, WatchBuyAdmin)
 
 admin.site.register(WatchBuyModel)
-admin.site.register(ContactModel)
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ['user', 'watch']
+admin.site.register(CommentModel, CommentAdmin)
+

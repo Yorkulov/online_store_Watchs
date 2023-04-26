@@ -1,12 +1,12 @@
 from django import forms
-from .models import ContactModel, WatchRegistrationModel, WatchBuyModel
+from .models import WatchRegistrationModel, WatchBuyModel
 
 
-class ContactForm(forms.ModelForm):
+# class ContactForm(forms.ModelForm):
     
-    class Meta:
-        model = ContactModel
-        fields = ['first_name', 'last_name', 'email', 'phone_number', 'message']
+#     class Meta:
+#         model = ContactModel
+#         fields = ['first_name', 'last_name', 'email', 'phone_number', 'message']
 
 
 class WatchregistrationForm(forms.ModelForm):

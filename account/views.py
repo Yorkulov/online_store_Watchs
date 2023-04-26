@@ -1,12 +1,14 @@
 from django.shortcuts import render, HttpResponse, HttpResponseRedirect, redirect
 from django.template import RequestContext
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import View
 from django.urls import reverse_lazy, reverse
 from django.contrib.auth import authenticate, login
-from account.forms import UserRegistrationForm, LoginForm, UserEditForm, ProfileEditForm
-from account.models import Profile
+from account.forms import UserRegistrationForm, LoginForm, UserEditForm, ProfileEditForm, ContactForm
+from account.models import Profile, ContactModel
+from viewapp.models import WatchModel
 
 # Create your views here.
 
@@ -84,7 +86,7 @@ def user_login(request):
         }
         return render(request, 'pages/login.html', context)
     
-
+@login_required
 def profile(request):
     user_form = request.user
     context = {
@@ -93,7 +95,7 @@ def profile(request):
     return render(request, "pages/profile.html", context)
 
 
-class ProfileEdit(View):
+class ProfileEdit(LoginRequiredMixin, View):
     success_url = reverse_lazy('home_page_view')
 
     def get(self, request):
@@ -116,4 +118,27 @@ class ProfileEdit(View):
                 profile_form.save()
                 return redirect('profile')
         return render(request, "pages/profile_edit.html", { "user_form" : user_form, "profile_form" : profile_form })
+    
+
+class ContactView(CreateView):
+    template_name = "pages/contact.html"
+
+    def get(self, request, *args, **kwargs):
+        form = ContactForm()
+        context = {
+            "form": form
+        }
+        return render(request, "pages/contact.html", context)
+    
+    def post(self, request, *args, **kwargs):
+        form = ContactForm(request.POST)
+        if request.method == "POST" and form.is_valid():
+            form.save()
+            return redirect('home_page_view')
+            # return HttpResponse("<h2>Malumotlaringiz muvaffaqiyatli junatildi!</h2>")
+
+        context = {
+            "form" : form
+        }
+        return render(request, "pages/contact.html", context)
     
