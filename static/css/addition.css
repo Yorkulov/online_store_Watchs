@@ -317,10 +317,6 @@
   min-height: 100vh;
 }
 
-.login-form {
-  box-shadow: 2px 9px 16px 6px rgba(57, 146, 215, 0.55);
-}
-
 .button_sign_up a {
   text-decoration: none;
 }
@@ -489,10 +485,21 @@
   margin-left: 50px;
 }
 
-.language_form {
-  background-color: none;
-  width: 150px;
-  height: auto;
-  margin: 0;
-  padding: 0;
+.go_button {
+  background-color: blue !important;
+  color: white !important;
+  border: none !important;
+  padding: 4px 20px !important;
+  font-size: 16px !important;
+  border-radius: 7px;
+  margin-left: 20px;
+}
+
+.select_button {
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(0, 0, 0) !important;
+  border: none !important;
+  padding: 4px 20px !important;
+  font-size: 16px !important;
+  border-radius: 7px !important;
 }/*# sourceMappingURL=addition.css.map */

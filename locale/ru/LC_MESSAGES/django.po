@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-27 03:48+0500\n"
+"POT-Creation-Date: 2023-10-23 22:10+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: .\config\settings.py:123
 msgid "Uzbek"
-msgstr "узбекский"
+msgstr "Узбекский"
 
 #: .\config\settings.py:124
 msgid "English"
@@ -30,36 +30,174 @@ msgstr "Английский"
 
 #: .\config\settings.py:125
 msgid "Russion"
-msgstr "Русский"
+msgstr "русский язык"
 
-#: .\templates\pages\index.html:9
+#: .\templates\pages\base.html:35
 msgid "Bosh sahifa"
 msgstr "Домашняя страница"
 
-#: .\templates\pages\index.html:12
-msgid "Xizmatlar"
-msgstr "Услуги"
-
-#: .\templates\pages\index.html:15
+#: .\templates\pages\base.html:38
 msgid "Mahsulotlar"
 msgstr "Продукты"
 
-#: .\templates\pages\index.html:18
-msgid "Biz bilan bog'lanish"
+#: .\templates\pages\base.html:41
+msgid "Bog'lanish"
 msgstr "связаться с нами"
 
-#: .\templates\pages\index.html:22
+#: .\templates\pages\base.html:45
 msgid "Profil"
 msgstr "Профиль"
 
-#: .\templates\pages\index.html:25
+#: .\templates\pages\base.html:50
+msgid "Admin Safihasi"
+msgstr "Страница админ"
+
+#: .\templates\pages\base.html:55
 msgid "Chiqish"
 msgstr "Выход"
 
-#: .\templates\pages\index.html:29
+#: .\templates\pages\base.html:59
 msgid "Kirish"
 msgstr "Входить"
 
-#: .\templates\pages\index.html:32
+#: .\templates\pages\base.html:62
 msgid "Ro'yxatdan o'tish"
 msgstr "Зарегистрироваться"
+
+#: .\templates\pages\index.html:9
+msgid "Sizning uslubingizni tomosha qiling."
+msgstr ""
+
+#: .\templates\pages\index.html:10
+msgid "Siz hech qachon haqiqiy soat taqmagansiz."
+msgstr "Вы никогда не носили настоящие часы."
+
+#: .\templates\pages\index.html:11
+msgid ""
+"Iste'molchilar uchun mavjud soatlar uslublari cheksiz va foyda ham "
+"cheksizdir. Agar siz moda Geek bo'lsangiz va ehtiyojni tartibga solishga "
+"jur'at etsangiz."
+msgstr ""
+"Доступные потребителям стили часов безграничны, как и преимущества это "
+"бесконечно. Если вы фанат моды и хотите разобраться в необходимости если "
+"посмеешь."
+
+#: .\templates\pages\index.html:14 .\templates\pages\index.html:16
+msgid "Boshlash"
+msgstr "Начало"
+
+#: .\templates\pages\index.html:18
+msgid "Galereya"
+msgstr "Галерея"
+
+#: .\templates\pages\index.html:44
+msgid "Oldingi"
+msgstr "Предыдущий"
+
+#: .\templates\pages\index.html:48
+msgid "Keyingi"
+msgstr "Следующий"
+
+#: .\templates\pages\index.html:56
+msgid "Bizning Xizmat Xususiyatimiz"
+msgstr "Наша Функция Обслуживания"
+
+#: .\templates\pages\index.html:57
+msgid ""
+"Tomosha kompaniyalari endi yoshlar kim har doim maqsadlar qaysi trendy "
+"soatlar haqida ko'proq e'tibor bor."
+msgstr ""
+"Смотреть компании сейчас молодые люди, которые всегда в тренде цели больше "
+"внимания уделяется часам."
+
+#: .\templates\pages\index.html:62
+msgid "Android versiyasi"
+msgstr "Версия для Android"
+
+#: .\templates\pages\index.html:63
+msgid "Android rasman 10.0"
+msgstr "Android официально 10.0"
+
+#: .\templates\pages\index.html:67
+msgid "Internet Xizmati"
+msgstr "Интернет-Сервис"
+
+#: .\templates\pages\index.html:68
+msgid "$ G Aqlli Soatlar"
+msgstr "$ G Умные Часы"
+
+#: .\templates\pages\index.html:72
+msgid "Musiqa pleyeri "
+msgstr "Музыкальный проигрыватель"
+
+#: .\templates\pages\index.html:73
+msgid "Musiqa ilovasidan foydalaning"
+msgstr "Приложение Музыка"
+
+#: .\templates\pages\index.html:84
+msgid "Batareya"
+msgstr "Аккумулятор"
+
+#: .\templates\pages\index.html:85
+msgid "Batareya muddati 18 soat"
+msgstr "Время автономной работы 18 часов"
+
+#: .\templates\pages\index.html:89
+msgid "Sozlamalar"
+msgstr "Настройки"
+
+#: .\templates\pages\index.html:90
+msgid "Sozlamalaringizni tanlang"
+msgstr "Выберите свои настройки"
+
+#: .\templates\pages\index.html:94
+msgid "Xabarlar"
+msgstr "Сообщения"
+
+#: .\templates\pages\index.html:95
+msgid "Xabarlar ilovasini oching"
+msgstr "Откройте приложение Сообщения"
+
+#: .\templates\pages\index.html:103
+msgid "Tomosha qilish"
+msgstr "Смотреть"
+
+#: .\templates\pages\index.html:104
+msgid "Bizning Mavjud Mahsulotimiz"
+msgstr "Наш Существующий Продукт"
+
+#: .\templates\pages\index.html:105
+msgid ""
+"Soat-bu kerakli moda aksessuari va erkaklar va ayollar uchun zarur shkaf "
+"sifatida qaraladi. Qo'l soatlari odatda."
+msgstr ""
+"Часы-необходимый модный аксессуар и необходимый гардероб для мужчин и женщин "
+"рассматривается как. Наручные часы обычно."
+
+#: .\templates\pages\index.html:125
+msgid "Sizning eng yaxshi vaqtingiz uchun eng yaxshi soat."
+msgstr "Лучшие часы для вашего лучшего времени."
+
+#: .\templates\pages\index.html:126
+msgid ""
+"Soat juda mashhur moda aksessuari bo'lgani uchun va erkaklar va ayollar "
+"uchun shkafning muhim qismi sifatida qaraladi."
+msgstr ""
+"Потому что часы-очень популярный модный аксессуар, и мужчины, и женщины "
+"считается неотъемлемой частью гардероба."
+
+#: .\templates\pages\index.html:127
+msgid "Play Video"
+msgstr "Play Video"
+
+#: .\templates\pages\index.html:131
+msgid "Misol uchun, agar kimdir noqulay sharoitlarda yashasa, ular\n shiori aniqligi ostida foydalaning\n ularga soatlarini ko'rsatish uchun noqulay sharoitlar ularning ehtiyojlarini qondirishi mumkin. Xuddi shunday, agar kimdir yoqsa\n handmade mahsulotlari keyin ular shiori Handmade foydalanish."
+msgstr "Например, если кто-то живет в неблагоприятных условиях, он\n используйте под девизомточность\n неблагоприятные условия, чтобы показать им свои часы может удовлетворить их потребности. Точно так же, если кому-то нравится\n изделия ручной работы тогда они используют слоган ручной работы."
+
+#: .\templates\pages\index.html:137
+msgid "Ronald Richards"
+msgstr "Рональд Ричардс"
+
+#: .\templates\pages\index.html:138
+msgid "D.M.Richards"
+msgstr "Д.М.Ричардс"

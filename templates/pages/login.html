@@ -2,6 +2,12 @@
 {% load static %}
 
 
+{% block link %}
+
+<link rel="stylesheet" href="{% static 'css/contact.css'%}">
+
+{% endblock link %}
+
 {% block content %}
 
 <form method="post" class="login-form">{% csrf_token %}

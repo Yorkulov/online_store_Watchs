@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-27 03:48+0500\n"
+"POT-Creation-Date: 2023-10-23 22:02+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,34 +30,195 @@ msgstr "English"
 msgid "Russion"
 msgstr "Russion"
 
-#: .\templates\pages\index.html:9
+#: .\templates\pages\base.html:35
 msgid "Bosh sahifa"
 msgstr "Home"
 
-#: .\templates\pages\index.html:12
-msgid "Xizmatlar"
-msgstr "Services"
-
-#: .\templates\pages\index.html:15
+#: .\templates\pages\base.html:38
 msgid "Mahsulotlar"
 msgstr "Products"
 
-#: .\templates\pages\index.html:18
-msgid "Biz bilan bog'lanish"
+#: .\templates\pages\base.html:41
+msgid "Bog'lanish"
 msgstr "conttact us"
 
-#: .\templates\pages\index.html:22
+#: .\templates\pages\base.html:45
 msgid "Profil"
 msgstr "My Profile"
 
-#: .\templates\pages\index.html:25
-msgid "Chiqish"
-msgstr "Log out"
+#: .\templates\pages\base.html:50
+msgid "Admin Safihasi"
+msgstr "Admin Page"
 
-#: .\templates\pages\index.html:29
+#: .\templates\pages\base.html:55
+msgid "Chiqish"
+msgstr "Log Out"
+
+#: .\templates\pages\base.html:59
 msgid "Kirish"
 msgstr "Log in"
 
-#: .\templates\pages\index.html:32
+#: .\templates\pages\base.html:62
 msgid "Ro'yxatdan o'tish"
-msgstr "Sign up"
+msgstr "Sign Up"
+
+#: .\templates\pages\index.html:9
+msgid "Sizning uslubingizni tomosha qiling."
+msgstr "Watch your style."
+
+#: .\templates\pages\index.html:10
+msgid "Siz hech qachon haqiqiy soat taqmagansiz."
+msgstr "You have never worn a real watch."
+
+#: .\templates\pages\index.html:11
+msgid ""
+"Iste'molchilar uchun mavjud soatlar uslublari cheksiz va foyda ham "
+"cheksizdir. Agar siz moda Geek bo'lsangiz va ehtiyojni tartibga solishga "
+"jur'at etsangiz."
+msgstr ""
+"The styles of watches available to consumers are endless, and the benefits "
+"are also unlimited. If you are a fashion Geek and want to put the need in "
+"order you dare."
+
+#: .\templates\pages\index.html:14 .\templates\pages\index.html:16
+msgid "Boshlash"
+msgstr "Get started"
+
+#: .\templates\pages\index.html:18
+msgid "Galereya"
+msgstr "Galery"
+
+#: .\templates\pages\index.html:44
+msgid "Oldingi"
+msgstr "Previous"
+
+#: .\templates\pages\index.html:48
+msgid "Keyingi"
+msgstr "Next"
+
+#: .\templates\pages\index.html:56
+#, fuzzy
+#| msgid "Bizning Mavjud Mahsulotimiz"
+msgid "Bizning Xizmat Xususiyatimiz"
+msgstr "Our Existing Product"
+
+#: .\templates\pages\index.html:57
+msgid ""
+"Tomosha kompaniyalari endi yoshlar kim har doim maqsadlar qaysi trendy "
+"soatlar haqida ko'proq e'tibor bor."
+msgstr ""
+"Watch companies are now young people who always targets which trendy there "
+"is more attention about watches."
+
+#: .\templates\pages\index.html:62
+#, fuzzy
+#| msgid "Android version"
+msgid "Android versiyasi"
+msgstr "Android version"
+
+#: .\templates\pages\index.html:63
+#, fuzzy
+#| msgid "Android officially 10.0"
+msgid "Android rasman 10.0"
+msgstr "Android officially 10.0"
+
+#: .\templates\pages\index.html:67
+msgid "Internet Xizmati"
+msgstr "Internet Service"
+
+#: .\templates\pages\index.html:68
+msgid "$ G Aqlli Soatlar"
+msgstr "$ G Smart Watches"
+
+#: .\templates\pages\index.html:72
+msgid "Musiqa pleyeri "
+msgstr "Music player"
+
+#: .\templates\pages\index.html:73
+msgid "Musiqa ilovasidan foydalaning"
+msgstr ""
+
+#: .\templates\pages\index.html:84
+msgid "Batareya"
+msgstr "Batarey"
+
+#: .\templates\pages\index.html:85
+msgid "Batareya muddati 18 soat"
+msgstr "Battery life 18 hours"
+
+#: .\templates\pages\index.html:89
+msgid "Sozlamalar"
+msgstr "Settings"
+
+#: .\templates\pages\index.html:90
+msgid "Sozlamalaringizni tanlang"
+msgstr "Select your settings"
+
+#: .\templates\pages\index.html:94
+msgid "Xabarlar"
+msgstr "Message"
+
+#: .\templates\pages\index.html:95
+msgid "Xabarlar ilovasini oching"
+msgstr "Open the Messages app"
+
+#: .\templates\pages\index.html:103
+msgid "Tomosha qilish"
+msgstr "Watch"
+
+#: .\templates\pages\index.html:104
+msgid "Bizning Mavjud Mahsulotimiz"
+msgstr "Our Existing Product"
+
+#: .\templates\pages\index.html:105
+msgid ""
+"Soat-bu kerakli moda aksessuari va erkaklar va ayollar uchun zarur shkaf "
+"sifatida qaraladi. Qo'l soatlari odatda."
+msgstr ""
+"The clock is the necessary fashion accessory and the necessary wardrobe for "
+"men and women is seen as. Wristwatches are usually."
+
+#: .\templates\pages\index.html:125
+msgid "Sizning eng yaxshi vaqtingiz uchun eng yaxshi soat."
+msgstr "The best hour for your best time."
+
+#: .\templates\pages\index.html:126
+msgid ""
+"Soat juda mashhur moda aksessuari bo'lgani uchun va erkaklar va ayollar "
+"uchun shkafning muhim qismi sifatida qaraladi."
+msgstr ""
+"Because the watch is a very popular fashion accessory and men and women is "
+"seen as an important part of the wardrobe."
+
+#: .\templates\pages\index.html:127
+msgid "Play Video"
+msgstr "Play Video"
+
+#: .\templates\pages\index.html:131
+#, fuzzy
+#| msgid ""
+#| "Misol uchun, agar kimdir noqulay sharoitlarda yashasa, ular\n"
+#| " shiori aniqligi ostida foydalaning\n"
+#| "  ularga soatlarini ko'rsatish uchun noqulay sharoitlar ularning "
+#| "ehtiyojlarini qondirishi mumkin. Xuddi shunday, agar kimdir yoqsa\n"
+#| " handmade mahsulotlari keyin ular shiori Handmade foydalanish."
+msgid ""
+"Misol uchun, agar kimdir noqulay sharoitlarda yashasa, ular\n"
+"                shiori aniqligi ostida foydalaning\n"
+"                ularga soatlarini ko'rsatish uchun noqulay sharoitlar "
+"ularning ehtiyojlarini qondirishi mumkin. Xuddi shunday, agar kimdir yoqsa\n"
+"                handmade mahsulotlari keyin ular shiori Handmade foydalanish."
+msgstr ""
+"For example, if someone lives in unfavorable conditions, they\n"
+" use under the slogan accuracy\n"
+" unfavorable conditions for showing them their hours can meet their needs. "
+"Similarly, if one likes\n"
+" handmade products then they use the slogan Handmade."
+
+#: .\templates\pages\index.html:137
+msgid "Ronald Richards"
+msgstr "Ronald Richards"
+
+#: .\templates\pages\index.html:138
+msgid "D.M.Richards"
+msgstr "D.M.Richards"

@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views import View
 from django.views.generic import ListView, TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.detail import DetailView
@@ -9,7 +10,7 @@ from django.urls import reverse_lazy
 from django.forms import forms
 from hitcount.models import HitCount
 from hitcount.views import HitCountMixin, get_hitcount_model
-from .models import WatchModel, WatchRegistrationModel
+from .models import WatchBuyModel, WatchModel, WatchRegistrationModel
 from .forms import WatchregistrationForm, WatchBuyForm
 from account.forms import CommentForm
 from account.models import CommentModel
@@ -183,3 +184,12 @@ def watchDetail(request, pk):
 
     return render(request, "pages/watch_detail.html", context)
 
+class AdminPageView(View):
+    def get(self, request):
+        all_users = User.objects.all()
+        all_watches = WatchModel.objects.all()
+        orders = WatchBuyModel.objects.all()        
+
+        return render(request, 'pages/admin.html', {'all_users': all_users, 'all_watches': all_watches, 'orders': orders})
+
+    

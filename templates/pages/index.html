@@ -1,20 +1,21 @@
 {% extends 'pages/base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block content %}
 
 <header class="header row">
     <div class="about col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-      <h5>Your watch your style</h5>
-      <h1>Have you ever worn a real watch.</h1>
-      <p>The styles of watches available to consumers are endless and profit also endless. if you are Fashion Geek and have guts to sort out need related to</p>
+      <h5>{% blocktrans %}Sizning uslubingizni tomosha qiling.{% endblocktrans %}</h5>
+      <h1>{% blocktrans %}Siz hech qachon haqiqiy soat taqmagansiz.{% endblocktrans %}</h1>
+      <p>{% blocktrans %}Iste'molchilar uchun mavjud soatlar uslublari cheksiz va foyda ham cheksizdir. Agar siz moda Geek bo'lsangiz va ehtiyojni tartibga solishga jur'at etsangiz.{% endblocktrans %}</p>
       <div class="buttons">
         {% if request.user.is_authenticated %}
-        <a href="{% url 'product_page_view' %}" class="btn started btn-outline-primary">Get started</a>
+        <a href="{% url 'product_page_view' %}" class="btn started btn-outline-primary">{% blocktrans %}Boshlash{% endblocktrans %}</a>
         {% else %}
-        <a href="{% url 'login' %}" class="btn started btn-outline-primary">Get started</a>
+        <a href="{% url 'login' %}" class="btn started btn-outline-primary">{% blocktrans %}Boshlash{% endblocktrans %}</a>
         {% endif %}
-        <a href="{% url 'product_page_view' %}" class="btn btn-outline-primary">Gallery</a>
+        <a href="{% url 'product_page_view' %}" class="btn btn-outline-primary">{% blocktrans %}Galereya{% endblocktrans %}</a>
       </div>
     </div>
     <div class="slide col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
@@ -40,11 +41,11 @@
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span class="visually-hidden">{% blocktrans %}Oldingi{% endblocktrans %}</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span class="visually-hidden">{% blocktrans %}Keyingi{% endblocktrans %}</span>
         </button>
       </div>
     </div>
@@ -52,25 +53,24 @@
   
   <section class="home-section section container justify-content-center">
     <div class="part-one text-center">
-        <h1>Our Service Feature</h1>
-        <p class="text-center">Watch companies are now focusing more on trendy watches which targets the
-            youngsters who always.</p>
+        <h1>{% blocktrans %}Bizning Xizmat Xususiyatimiz{% endblocktrans %}</h1>
+        <p class="text-center">{% blocktrans %}Tomosha kompaniyalari endi yoshlar kim har doim maqsadlar qaysi trendy soatlar haqida ko'proq e'tibor bor.{% endblocktrans %}</p>
         <div class="main-part row justify-content-center">
             <div class="cards-one text-center col-3 col-sm-3 col-12">
                 <div class="card">
                     <img class="img-fluid" src="{% static 'images/Group 101.png' %}" alt="Picture">
-                    <h5 class="card-title">Andriod version</h5>
-                    <p class="card-text">Android officially 10.0</p>
+                    <h5 class="card-title">{% blocktrans %}Android versiyasi{% endblocktrans %}</h5>
+                    <p class="card-text">{% blocktrans %}Android rasman 10.0{% endblocktrans %}</p>
                 </div>
                 <div class="card">
                     <img class="img-fluid" src="{% static 'images/Group 103.png' %}" alt="Picture">
-                    <h5 class="card-title">Internet Service</h5>
-                    <p class="card-text">$G Smart Watches</p>
+                    <h5 class="card-title">{% blocktrans %}Internet Xizmati{% endblocktrans %}</h5>
+                    <p class="card-text">{% blocktrans %}$ G Aqlli Soatlar{% endblocktrans %}</p>
                 </div>
                 <div class="card">
                     <img class="img-fluid" src="{% static 'images/Group 105.png' %}" alt="Picture">
-                    <h5 class="card-title">Music Player</h5>
-                    <p class="card-text">Use the Musoc app</p>
+                    <h5 class="card-title">{% blocktrans %}Musiqa pleyeri {% endblocktrans %}</h5>
+                    <p class="card-text">{% blocktrans %}Musiqa ilovasidan foydalaning{% endblocktrans %}</p>
                 </div>
             </div>
   
@@ -81,18 +81,18 @@
             <div class="cards-two col-3 col-sm-3 col-12">
                 <div class="card">
                     <img class="img-fluid" src="{% static 'images/Group 107.png' %}" alt="Picture">
-                    <h5 class="card-title">Battery</h5>
-                    <p class="card-text">battery life is 18 hours</p>
+                    <h5 class="card-title">{% blocktrans %}Batareya{% endblocktrans %}</h5>
+                    <p class="card-text">{% blocktrans %}Batareya muddati 18 soat{% endblocktrans %}</p>
                 </div>
                 <div class="card">
                     <img class="img-fluid" src="{% static 'images/Group 109.png' %}" alt="Picture">
-                    <h5 class="card-title">Settings</h5>
-                    <p class="card-text">Choose your settings.</p>
+                    <h5 class="card-title">{% blocktrans %}Sozlamalar{% endblocktrans %}</h5>
+                    <p class="card-text">{% blocktrans %}Sozlamalaringizni tanlang{% endblocktrans %}</p>
                 </div>
                 <div class="card">
                     <img class="img-fluid" src="{% static 'images/Group 111.png' %}" alt="Picture">
-                    <h5 class="card-title">Messages</h5>
-                    <p class="card-text">Open the Messages app</p>
+                    <h5 class="card-title">{% blocktrans %}Xabarlar{% endblocktrans %}</h5>
+                    <p class="card-text">{% blocktrans %}Xabarlar ilovasini oching{% endblocktrans %}</p>
                 </div>
             </div>
         </div>
@@ -100,10 +100,9 @@
   
     <div class="part-two justify-content-center">
         <div class="about">
-            <p>Watch</p>
-            <h1 class="display-4">Our Available Product</h1>
-            <p>Watch is such a desired fashion accessory and is seen as a necessary cupboard piece for both men
-                and women. Wristwatches are generally.</p>
+            <p>{% blocktrans %}Tomosha qilish{% endblocktrans %}</p>
+            <h1 class="display-4">{% blocktrans %}Bizning Mavjud Mahsulotimiz{% endblocktrans %}</h1>
+            <p>{% blocktrans %}Soat-bu kerakli moda aksessuari va erkaklar va ayollar uchun zarur shkaf sifatida qaraladi. Qo'l soatlari odatda.{% endblocktrans %}</p>
         </div>
         <div class="cards row justify-content-center">
             <div class="card col-3">
@@ -123,21 +122,20 @@
                 </video>
             </div>
             <div class="video-text col-xxl-5 col-xl-5 col-lg-12">
-                <h2 class="display-4">The best watch for your best time.</h2>
-                <p>Since the watch is such a popular Fashion accessory and is seen as an essential wardrobe
-                    piece for both men and women.</p>
-                <button class="play-video" type="submit">Play Video</button>
+                <h2 class="display-4">{% blocktrans %}Sizning eng yaxshi vaqtingiz uchun eng yaxshi soat.{% endblocktrans %}</h2>
+                <p>{% blocktrans %}Soat juda mashhur moda aksessuari bo'lgani uchun va erkaklar va ayollar uchun shkafning muhim qismi sifatida qaraladi.{% endblocktrans %}</p>
+                <button class="play-video" type="submit">{% blocktrans %}Play Video{% endblocktrans %}</button>
             </div>
         </div>
         <div class="text-card row">
-            <p class="col-12 align-center-start">For example, if someone lives in adverse conditions then they
-                use the slogan accuracy under
-                adverse conditions to show them their watch can fulfill their needs. Similarly, if someone likes
-                handmade products then they use the slogan Handmade. </p>
+            <p class="col-12 align-center-start">{% blocktrans %}Misol uchun, agar kimdir noqulay sharoitlarda yashasa, ular
+                shiori aniqligi ostida foydalaning
+                ularga soatlarini ko'rsatish uchun noqulay sharoitlar ularning ehtiyojlarini qondirishi mumkin. Xuddi shunday, agar kimdir yoqsa
+                handmade mahsulotlari keyin ular shiori Handmade foydalanish.{% endblocktrans %} </p>
             <div class="about col-12 row align-items-end justify-content-start">
                 <div class="info col-3">
-                    <h3>Ronald Richards</h3>
-                    <p>D.M.Richards</p>
+                    <h3>{% blocktrans %}Ronald Richards{% endblocktrans %}</h3>
+                    <p>{% blocktrans %}D.M.Richards{% endblocktrans %}</p>
                 </div>
                 <div class="img col-3 align-self-center"><img class="" src="{% static 'images/Rectangle 33.png' %}"
                         alt="Picture"></div>

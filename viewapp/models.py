@@ -14,7 +14,7 @@ class WatchModel(models.Model):
     image_one = models.ImageField(upload_to="watchs/")
     image_two = models.ImageField(upload_to="watchs/", blank=True)
     image_three = models.ImageField(upload_to="watchs/", blank=True)
-    added_time = models.TimeField(auto_now=True)
+    added_time = models.DateTimeField(auto_now=True)
     view_count = models.IntegerField(default=0)
 
     def __str__(self):
@@ -59,5 +59,5 @@ class WatchBuyModel(models.Model):
     check_code = models.SmallIntegerField()
 
     def __str__(self):
-        return self.registration.title
+        return self.registration.user.username
     
