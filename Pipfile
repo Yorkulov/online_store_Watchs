@@ -4,13 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "==4.1.1"
-pillow = "*"
-django-modeltranslation = "*"
-checksum = "*"
-modeltranslation = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.11"
+python_version = "3.9"
